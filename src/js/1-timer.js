@@ -53,6 +53,13 @@ startBtn.addEventListener('click', () => {
 
       if (timeDifference <= 0) {
           clearInterval(timerId);
+
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          input.disabled = false;
+          startBtn.disabled = true;
           return;
       }
       const time = convertMs(timeDifference);
